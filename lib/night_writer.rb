@@ -1,0 +1,7 @@
+class NightWriter
+
+
+
+  
+
+end
