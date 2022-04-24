@@ -10,8 +10,12 @@ class FileReader
     File.read(@input_filepath).delete("\n")
   end
 
+  def write_braille
+
+  end
+
   def print_output_message
-    puts "Created 'braille.txt' containing 256 characters"
+    puts "Created #{@output_filepath} containing #{@output_filepath.length} characters"
 
   end
 
