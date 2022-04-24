@@ -1,10 +1,8 @@
-class NightWriter
+require './lib/file_reader'
+file_reader = FileReader.new
+# input_file = ARGV[0]
+# output_file = ARGV[1]
 
-def initialize
-  
-end
-
-
-
-
-end
+puts read_input
+puts '-----'
+puts write_output
