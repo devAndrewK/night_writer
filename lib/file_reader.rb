@@ -4,7 +4,6 @@ class FileReader
   def initialize
     @input_filepath = ARGV[0]
     @output_filepath = ARGV[1]
-    @output_file_length = 0
   end
 
   def read
@@ -16,13 +15,11 @@ class FileReader
   end
 
   def file_length
-    @output_file_length = read.length
+    read.length
   end
 
   def print_output_message
-    file_length
-    p "Created #{@output_filepath} containing #{@output_file_length} characters"
-
+    p "Created #{@output_filepath} containing #{file_length} characters"
   end
 
 end
