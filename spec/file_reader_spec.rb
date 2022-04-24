@@ -19,5 +19,11 @@ RSpec.describe FileReader do
     expect(file_reader.read).to eq("test")
   end
 
+  it 'can print_output_message' do
+    file_reader = FileReader.new
+    expect(file_reader.print_output_message).to eq(
+      "Created rspec_output.txt containing 4 characters")
+  end
+
 
 end
