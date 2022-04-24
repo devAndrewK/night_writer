@@ -21,6 +21,7 @@ RSpec.describe FileReader do
 
   it 'can print_output_message' do
     file_reader = FileReader.new
+    #require 'pry';binding.pry
     expect(file_reader.print_output_message).to eq(
       "Created rspec_output.txt containing 4 characters")
   end
