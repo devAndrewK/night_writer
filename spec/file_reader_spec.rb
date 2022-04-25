@@ -32,5 +32,11 @@ RSpec.describe FileReader do
     expect(file_reader.read(file_reader.output_filepath)).to eq("test")
   end
 
+  it 'can convert english to braille' do
+    file_reader = FileReader.new
+    expect(file_reader.convert_to_braille).to eq(
+      ".oo..o.o\noo.oo.oo\no...o.o.\n")
+  end
+
 
 end
