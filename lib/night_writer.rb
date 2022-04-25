@@ -1,8 +1,7 @@
 require './lib/file_reader'
 file_reader = FileReader.new
-# input_file = ARGV[0]
-# output_file = ARGV[1]
+#file_reader.read
+file_reader.write_braille
+file_reader.print_output_message
 
-puts read_input
-puts '-----'
-puts write_output
+require 'pry';binding.pry
