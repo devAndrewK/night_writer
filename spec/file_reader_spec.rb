@@ -16,7 +16,7 @@ RSpec.describe FileReader do
 
   it 'can read from a file' do
     file_reader = FileReader.new
-    expect(file_reader.read).to eq("test")
+    expect(file_reader.read(file_reader.input_filepath)).to eq("test")
   end
 
   it 'can print_output_message' do
@@ -24,6 +24,12 @@ RSpec.describe FileReader do
     #require 'pry';binding.pry
     expect(file_reader.print_output_message).to eq(
       "Created rspec_output.txt containing 4 characters")
+  end
+
+  it 'can write to a file' do
+    file_reader = FileReader.new
+    file_reader.write_braille
+    expect(file_reader.read(file_reader.output_filepath)).to eq("test")
   end
 
 
